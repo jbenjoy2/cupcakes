@@ -5,9 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.css" integrity="sha512-f73UKwzP1Oia45eqHpHwzJtFLpvULbhVpEJfaWczo/ZCV5NWSnK4vLDnjTaMps28ocZ05RbI83k2RlQH92zy7A==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../static/app.css">
     <title>Cupcakes!</title>
 </head>
 <body>
+    <h1 class="text-center">The Cupcakery!</h1>
+
+    <hr>
+    <h2 >Our Cupcakes</h2>
+    
+    <div class="container-fluid">
+        <ul id="cupcakes-list">
+        </ul>
+    </div>
+    
+    <hr>
+<h2>Add a Cupcake!</h2>
+   <div class="container" id="form-wrapper">
+       <form id="add-cupcake-form">
+            <div class="form-group">
+                <label for="flavor">Flavor: </label>
+                <input type="text" class="form-control" id="flavor">
+            </div>
+            <div class="form-group">
+                <label for="size">Size: </label>
+                <select name="size" id="size" class="form-control">
+                    <option selected>Select Size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating (between 1 and 10)</label>
+                <input type="number" name="rating" id="rating" class="form-control" min="1" max="10">
+            </div>
+            <div class="form-group">
+                <label for="image">Image URL</label>
+                <input type="text" id="image" class="form-control">
+            </div>
+            <button class="btn btn-success btn-block">Add!</button>
+        </form>
+   </div>
 
 
     <script src="http://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
